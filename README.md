@@ -1,1 +1,1 @@
-<h1 align="center">Compendium</h1>
+<h1 align="center">Maleghast Compendium</h1>

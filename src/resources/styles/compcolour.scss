@@ -1,16 +1,28 @@
 :root {
-  --colour_default_main: #f08d2d;
-  --colour_default_secondary: #ca6806;
+  --colour_default_main: #FF0000;
+  --colour_default_secondary: #ff4848;
 
   --colour_red_main: #EE220C;
   --colour_green_main: #61D836;
   --colour_yellow_main: #FEAE00;
   --colour_blue_main: #00A2FF;
+  --colour_pink_main: #F20DAF;
+  --colour_orange_main: #FF7829;
+  --colour_neongreen_main: #29FF3C;
+  --colour_neonblue_main: #91FFEF;
+  --colour_gold_main: #FFC93B;
+  --colour_purple_main: #9F00FF;
 
   --colour_red_secondary: #FF968D;
   --colour_green_secondary: #88FA4E;
   --colour_yellow_secondary: #FFD932;
   --colour_blue_secondary: #4CDDFE;
+  --colour_pink_secondary: #fc56ca;
+  --colour_orange_secondary: #ff9a60;
+  --colour_neongreen_secondary: #70ff7c;
+  --colour_neonblue_secondary: #c1fff6;
+  --colour_gold_secondary: #fdd87a;
+  --colour_purple_secondary: #b743ff;
 
   --colour_grey_main: #929292;
   --colour_grey_secondary: #D5D5D5;
@@ -22,18 +34,30 @@
 }
 
 [data-theme='light'] {
-  --colour_default_main: #f08d2d;
-  --colour_default_secondary: #ca6806;
+  --colour_default_main: #FF0000;
+  --colour_default_secondary: #ff4848;
 
   --colour_red_main: #EE220C;
   --colour_green_main: #61D836;
   --colour_yellow_main: #FEAE00;
   --colour_blue_main: #00A2FF;
+  --colour_pink_main: #F20DAF;
+  --colour_orange_main: #FF7829;
+  --colour_neongreen_main: #29FF3C;
+  --colour_neonblue_main: #91FFEF;
+  --colour_gold_main: #FFC93B;
+  --colour_purple_main: #9F00FF;
 
   --colour_red_secondary: #FF968D;
   --colour_green_secondary: #88FA4E;
   --colour_yellow_secondary: #FFD932;
   --colour_blue_secondary: #4CDDFE;
+  --colour_pink_secondary: #fc56ca;
+  --colour_orange_secondary: #FF9a60;
+  --colour_neongreen_secondary: #70ff7c;
+  --colour_neonblue_secondary: #c1fff6;
+  --colour_gold_secondary: #fdd87a;
+  --colour_purple_secondary: #b743ff;
 
   --colour_grey_main: #929292;
   --colour_grey_secondary: #D5D5D5;
@@ -50,18 +74,30 @@
 }
 
 [data-theme='dark'] {
-  --colour_default_main: #a35d18;
-  --colour_default_secondary: #ca6806;
+  --colour_default_main: #bd0000;
+  --colour_default_secondary: #8a0000;
 
   --colour_red_main: #EE220C;
   --colour_green_main: #61D836;
   --colour_yellow_main: #FEAE00;
   --colour_blue_main: #00A2FF;
+  --colour_pink_main: #F20DAF;
+  --colour_orange_main: #FF7829;
+  --colour_neongreen_main: #29FF3C;
+  --colour_neonblue_main: #91FFEF;
+  --colour_gold_main: #FFC93B;
+  --colour_purple_main: #9F00FF;
 
   --colour_red_secondary: #b11200;
   --colour_green_secondary: #3da318;
   --colour_yellow_secondary: #c78903;
   --colour_blue_secondary: #0073b6;
+  --colour_pink_secondary: #b6007f;
+  --colour_orange_secondary: #c44c07;
+  --colour_neongreen_secondary: #0ab118;
+  --colour_neonblue_secondary: #70d3c4;
+  --colour_gold_secondary: #daa729;
+  --colour_purple_secondary: #6c00af;
 
   --colour_offwhite: #0f0f0f;
   --colour_offerwhite: #1a1a1a;
@@ -158,3 +194,55 @@
 .borderWhite { border-color: var(--colour_white) !important;  }
 
 
+.backgroundpink { background-color: var(--colour_pink_main) !important;  }
+.colorpink { color: var(--colour_pink_main) !important;  }
+.borderpink { border-color: var(--colour_pink_main) !important;  }
+
+.subbackgroundpink { background-color: var(--colour_pink_secondary) !important;  }
+.subcolorpink { color: var(--colour_pink_secondary) !important;  }
+.subborderpink { border-color: var(--colour_pink_secondary) !important;  }
+
+
+.backgroundorange { background-color: var(--colour_orange_main) !important;  }
+.colororange { color: var(--colour_orange_main) !important;  }
+.borderorange { border-color: var(--colour_orange_main) !important;  }
+
+.subbackgroundorange { background-color: var(--colour_orange_secondary) !important;  }
+.subcolororange { color: var(--colour_orange_secondary) !important;  }
+.subborderorange { border-color: var(--colour_orange_secondary) !important;  }
+
+
+.backgroundneongreen { background-color: var(--colour_neongreen_main) !important;  }
+.colorneongreen { color: var(--colour_neongreen_main) !important;  }
+.borderneongreen { border-color: var(--colour_neongreen_main) !important;  }
+
+.subbackgroundneongreen { background-color: var(--colour_neongreen_secondary) !important;  }
+.subcolorneongreen { color: var(--colour_neongreen_secondary) !important;  }
+.subborderneongreen { border-color: var(--colour_neongreen_secondary) !important;  }
+
+
+.backgroundneonblue { background-color: var(--colour_neonblue_main) !important;  }
+.colorneonblue { color: var(--colour_neonblue_main) !important;  }
+.borderneonblue { border-color: var(--colour_neonblue_main) !important;  }
+
+.subbackgroundneonblue { background-color: var(--colour_neonblue_secondary) !important;  }
+.subcolorneonblue { color: var(--colour_neonblue_secondary) !important;  }
+.subborderneonblue { border-color: var(--colour_neonblue_secondary) !important;  }
+
+
+.backgroundgold { background-color: var(--colour_gold_main) !important;  }
+.colorgold { color: var(--colour_gold_main) !important;  }
+.bordergold { border-color: var(--colour_gold_main) !important;  }
+
+.subbackgroundgold { background-color: var(--colour_gold_secondary) !important;  }
+.subcolorgold { color: var(--colour_gold_secondary) !important;  }
+.subbordergold { border-color: var(--colour_gold_secondary) !important;  }
+
+
+.backgroundpurple { background-color: var(--colour_purple_main) !important;  }
+.colorpurple { color: var(--colour_purple_main) !important;  }
+.borderpurple { border-color: var(--colour_purple_main) !important;  }
+
+.subbackgroundpurple { background-color: var(--colour_purple_secondary) !important;  }
+.subcolorpurple { color: var(--colour_purple_secondary) !important;  }
+.subborderpurple { border-color: var(--colour_purple_secondary) !important;  }

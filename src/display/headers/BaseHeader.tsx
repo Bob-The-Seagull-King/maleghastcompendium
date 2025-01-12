@@ -33,7 +33,7 @@ const BaseHeader = (prop: any) => {
         <ErrorBoundary fallback={<div>Something went wrong with BaseHeader.tsx</div>}>
             <div className='topbarCompendiumBase topbarCompendiumStructure hstack gap-3' style={{justifyContent:"center"}}>
                 <span style={{paddingLeft:"0em"}}/>
-                <h1 className='headertext'>COMPENDIUM</h1>
+                <h1 className='headertext'>MALEGHAST COMPENDIUM</h1>
                 <p className='headersubtext'>v0.0.1</p>
                 <div className="vr headertext"></div>
                 <Button style={{padding:"0em"}} variant="" onClick={() => NavigateHome()}>

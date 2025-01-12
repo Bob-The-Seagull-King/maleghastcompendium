@@ -66,6 +66,24 @@ export function getColour(name: string){
         case "grey": {
             return "grey"
         }
+        case "pink": {
+            return "pink"
+        }
+        case "orange": {
+            return "orange"
+        }
+        case "neongreen": {
+            return "neongreen"
+        }
+        case "neonblue": {
+            return "neonblue"
+        }
+        case "gold": {
+            return "gold"
+        }
+        case "purple": {
+            return "purple"
+        }
         default: {
             return "default"
         }

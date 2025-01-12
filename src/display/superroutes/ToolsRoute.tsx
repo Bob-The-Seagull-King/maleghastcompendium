@@ -34,7 +34,7 @@ const ToolsRoute: React.FC<IControllerProp> = (prop) => {
             <div className="backgroundBaseColour" data-theme={theme}>
                 <Routes>
                     <Route path={ROUTES.TOOLS_CONTENT_UPLOAD_ROUTE} element={<ToolsContentManager manager={prop.controller.ContentManager}/>} />
-                    <Route path={ROUTES.TOOLS_CONTENT_SAVE_ITEM} element={<ToolsSavedItem manager={prop.controller.SaveItemManager}/>} />
+                    {/*<Route path={ROUTES.TOOLS_CONTENT_SAVE_ITEM} element={<ToolsSavedItem manager={prop.controller.SaveItemManager}/>} />*/}
                 </Routes>
             </div>
         </ErrorBoundary>

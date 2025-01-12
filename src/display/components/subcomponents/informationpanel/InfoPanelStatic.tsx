@@ -30,7 +30,7 @@ export const PanelDataDex : PanelDataTable = {
                         <div className="col-12">
                             <div className="row textHolder">
                                 <p className="bodytext">
-                                    Content packs are structured JSON files that allow people to make their game content accessable in
+                                    Content packs are structured JSON files that allow people to make their maleghast game content accessable in
                                     the compendium. Here, you can add or delete content packs to include them in the Compendium. You can
                                     hold up to 5MB of content packs at any given time.
                                 </p>

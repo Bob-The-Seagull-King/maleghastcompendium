@@ -1,6 +1,6 @@
 # Compendium Data
 
-Shared data resource for projects involving [BLANK]
+Shared data resource for projects involving Maleghast
 
 ## Data
 
