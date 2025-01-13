@@ -17,7 +17,25 @@ type ObjectTag = {[_name : string] : string | boolean | number | null | []}
 
 enum ItemType {
     None = '',
-    GlossaryRule = 'Glossary'
+    GlossaryRule = 'Glossary',
+    Unit = 'Unit',
+    Trait = 'Trait',
+    Act = 'ACT',
+    Upgrade = 'Upgrade'
+}
+
+enum ArmourType {
+    None = 0,
+    Physical = 1,
+    Magic = 2,
+    Super = 3
+}
+
+enum ArmourName {
+    'None' = 0,
+    'Phys' = 1,
+    'Mag' = 2,
+    'Super' = 3
 }
 
 abstract class CompendiumItem {
@@ -75,4 +93,4 @@ abstract class CompendiumItem {
     }
 }
 
-export {ICompendiumItemData, CompendiumItem, ItemType, ObjectTag}
+export {ICompendiumItemData, CompendiumItem, ItemType, ObjectTag, ArmourName, ArmourType}

@@ -1,0 +1,83 @@
+[
+    {
+        "id": "ac_ol45",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "attack": true,
+            "reload": true,
+            "headshot": true
+        },
+        "eventtags": { 
+            "attack": true,
+            "reload": true,
+            "headshot": true,
+            "ranged": true
+        },
+        "name": "OL45",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "On Hit: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "1 damage, ignoring armor.",
+                        "glossary": [ {"val": "armor", "id": "gl_armor"} ]
+                    }
+                ]
+            },
+            { "tags": {"desc_type" : "gap"}, "content": "" },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Headshot: ",
+                "glossary": [ {"val": "Headshot", "id": "gl_headshot"} ],
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Inflict 1 Vulnerable.",
+                        "glossary": [ {"val": "Vulnerable", "id": "gl_vulnerable"} ]
+                    }
+                ]
+            }
+        ],
+        "range": [2,3],
+        "attack": true
+    },
+    {
+        "id": "ac_baton",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "push": true
+        },
+        "eventtags": { 
+            "melee": true
+        },
+        "name": "Baton",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Push 1.",
+                        "glossary": [ {"val": "Push", "id": "gl_push"} ]
+                    },
+                    {
+                        "tags": {"desc_type" : "subeffect"},
+                        "content": " (3+) "
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Inflict 1 Vulnerable.",
+                        "glossary": [ {"val": "Vulnerable", "id": "gl_vulnerable"} ]
+                    }
+                ]
+            }
+        ],
+        "range": [2,3],
+        "attack": true
+    }
+]

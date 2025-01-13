@@ -75,6 +75,18 @@ class DataResponder {
             case "images": {
                 return RelevantSet.imagedata.concat(data)
             }
+            case "unit": {
+                return RelevantSet.unitdata.concat(data)
+            }
+            case "trait": {
+                return RelevantSet.traitdata.concat(data)
+            }
+            case "act": {
+                return RelevantSet.actdata.concat(data)
+            }
+            case "upgrade": {
+                return RelevantSet.upgradedata.concat(data)
+            }
             default: {
                 return data
             }

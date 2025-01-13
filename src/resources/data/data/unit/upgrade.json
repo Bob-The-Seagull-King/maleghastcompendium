@@ -1,0 +1,65 @@
+[
+    {
+        "id": "up_brace",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {
+            "show_on": "general"
+        },
+        "name": "Brace",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "While in cover, attacks gain +1 max range and push 1 on hit.",
+                "glossary": [ {"val": "push 1", "id": "gl_push"}, {"val": "cover", "id": "gl_cover"} ]
+            }
+        ]
+    },
+    {
+        "id": "up_tacticalreload",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {
+            "show_on": "general"
+        },
+        "name": "Tactical Reload",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Gain: "
+            },
+            { "tags": {"desc_type" : "gap"}, "content": "" },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Headshot: ",
+                "glossary": [ {"val": "Headshot", "id": "gl_headshot"} ],
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Reload and gain 1 Strength.",
+                        "glossary": [ {"val": "Reload", "id": "gl_reload"},{"val": "Strength", "id": "gl_strength"} ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "up_scavengeammo",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {
+            "show_on": "general"
+        },
+        "name": "Scavenge Ammo",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "May consume one adjacent corpse before or after ACTing to reload and gain 1 Strength.",
+                "glossary": [ {"val": "reload", "id": "gl_reload"},{"val": "Strength", "id": "gl_strength"} ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "id": "un_gunwight",
+        "type": "Unit",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Gunwight",
+        "colour": "pink",
+        "category"    : "Thrall",
+        "stat_mv"     : 2,
+        "stat_hp"     : 2,
+        "stat_df"     : 4,
+        "stat_arm"    : "NONE",
+        "house"       : "hs_carcass",
+        "traits"      : ["tr_formation","tr_thrall"],
+        "acts"        : ["ac_ol45","ac_baton"],
+        "upgrades"    : ["up_brace", "up_tacticalreload", "up_scavengeammo"]
+    }
+]

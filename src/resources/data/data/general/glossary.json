@@ -1,17 +1,149 @@
 [
     {
-        "id": "gl_default",
+        "id": "gl_plusdice",
         "type": "Glossary",
         "source": "core",
         "tags": {
-            "category" : "default"
+            "category" : "dice"
         },
         "eventtags": {},
-        "name": "Default",
+        "name": "+D",
         "description":  [{
             "tags": {"desc_type" : "desc"},
-            "content": "This is a default test item.",
-            "subcontent":   []
+            "content": "By default, you roll one die for all rolls. Some abilities allow you to add dice from this pool. This is written as +1D, so for example an ability that gives you +1D to attacks gives you 1 (base) plus 1 (bonus) die, for a total of two. You would roll both dice, then pick the highest result for your attack roll."
+        }]
+    },
+    {
+        "id": "gl_minusdice",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "dice"
+        },
+        "eventtags": {},
+        "name": "-D",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "By default, you roll one die for all rolls. Some abilities allow you to remove dice from this pool. This is written as -1D, so for example an ability that gives you -1D to attacks gives you 1 (base) minus 1 (bonus) die, for a total of zero. If the total is zero, you would roll both dice then pick the lowest result for your attack roll."
+        }]
+    },
+    {
+        "id": "gl_armour",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "health"
+        },
+        "eventtags": {},
+        "name": "Armor",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Armor represents strong supernatural or physical protection from damage. If a unit is armored against a damage type, it takes 1 less damage from that type, any time it takes damage. This could reduce damage to 0. Armor types are physical (any damage that is not fire, toxic, curse, or holy), magical (fire, toxic, curse, and holy damage), and super armor (all damage). Armor does not stack with itself if a unit would gain it more than once."
+        }]
+    },
+    {
+        "id": "gl_headshot",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "faction",
+            "faction"  : "carcass"
+        },
+        "eventtags": { },
+        "name": "Headshot",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Effect that triggers when rolling a 6 on the final attack roll."
+        }]
+    },
+    {
+        "id": "gl_reload",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "faction",
+            "faction"  : "carcass"
+        },
+        "eventtags": { },
+        "name": "Reload",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Once used, a unit cannot use any ability with this tag until it reloads. To reload, sacrifice a MOVE. Other abilities may allow a reload for free."
+        }]
+    },
+    {
+        "id": "gl_vulnerable",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "token",
+            "token": "negative"
+        },
+        "eventtags": { 
+            "token": "negative"
+        },
+        "name": "Vulnerable",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Take +1 more damage, discard one after damage is increased this way."
+        }]
+    },
+    {
+        "id": "gl_strength",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "token",
+            "token": "positive"
+        },
+        "eventtags": { 
+            "token": "positive"
+        },
+        "name": "Strength",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Deal +1 damage, discard one after dealing damage."
+        }]
+    },
+    {
+        "id": "gl_push",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "movement"
+        },
+        "eventtags": { 
+        },
+        "name": "Push",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Involuntarily push unit a number of spaces, as long as each space of the push is further away from the pushing unit or effect than the last space. Does not count as moving."
+        },
+        { "tags": {"desc_type" : "gap"}, "content": ""},
+        {
+            "tags": {"desc_type" : "desc"},
+            "content": "When a unit is pushed by an ability, it is called forced movement. Forced movement ignores movement penalties (such as from terrain) and doesn’t count as a MOVE."
+        }]
+    },
+    {
+        "id": "gl_cover",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "general"
+        },
+        "eventtags": { 
+        },
+        "name": "Cover",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Ranged abilities often cannot target adjacent characters and attacks gain -1D against characters in cover.",
+            "glossary": [ {"val": "-1D", "id": "gl_minusdice"} ]
+        },
+        { "tags": {"desc_type" : "gap"}, "content": ""},
+        {
+            "tags": {"desc_type" : "desc"},
+            "content": "Units can take cover against ranged attacks by moving next to a space that grants cover (by default an elevated space or a wall). If they do, draw an imaginary straight line across the battlefield lined up with where they are touching their cover. They gain cover against units in spaces past that line."
         }]
     }
 ]

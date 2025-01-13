@@ -1,0 +1,31 @@
+[
+    {
+        "id": "tr_formation",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Formation",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "While adjacent to an ally, gain +1D on attacks.",
+                "glossary": [ {"val": "+1D", "id": "gl_plusdice"} ]
+            }
+        ]
+    },
+    {
+        "id": "tr_thrall",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Thrall",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "2 of these units are worth 1 unit slot. Can be activated two at a time."
+            }
+        ]
+    }
+]
