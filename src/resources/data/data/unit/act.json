@@ -23,11 +23,10 @@
                     {
                         "tags": {"desc_type" : "desc"},
                         "content": "1 damage, ignoring armor.",
-                        "glossary": [ {"val": "armor", "id": "gl_armor"} ]
+                        "glossary": [ {"val": "armor", "id": "gl_armour"} ]
                     }
                 ]
             },
-            { "tags": {"desc_type" : "gap"}, "content": "" },
             {
                 "tags": {"desc_type" : "effect"},
                 "content": "Headshot: ",
@@ -77,7 +76,7 @@
                 ]
             }
         ],
-        "range": [2,3],
-        "attack": true
+        "range": [],
+        "attack": false
     }
 ]

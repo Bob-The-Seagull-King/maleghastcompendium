@@ -32,6 +32,7 @@ class Unit extends CompendiumItem {
     public readonly DF;
     public readonly ARM;
     public readonly House;
+    public readonly Category;
     
     /**
      * Assigns parameters and creates a series of description
@@ -51,7 +52,9 @@ class Unit extends CompendiumItem {
         this.HP = data.stat_hp;
         this.DF = data.stat_df;
         this.ARM = data.stat_arm;
+
         this.House = data.house;
+        this.Category = data.category;
 
         this.Colour = data.colour
     }

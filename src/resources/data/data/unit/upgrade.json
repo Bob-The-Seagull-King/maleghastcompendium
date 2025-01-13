@@ -27,10 +27,9 @@
         "name": "Tactical Reload",
         "description":  [
             {
-                "tags": {"desc_type" : "desc"},
+                "tags": {"desc_type" : "effect"},
                 "content": "Gain: "
             },
-            { "tags": {"desc_type" : "gap"}, "content": "" },
             {
                 "tags": {"desc_type" : "effect"},
                 "content": "Headshot: ",
