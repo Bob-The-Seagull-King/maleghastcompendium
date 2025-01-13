@@ -72,7 +72,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
     },
     unit: {
         searchId: 'unit',
-        width: 9,
+        width: 8,
         returnDisplay(item: any) {
             return (
                 

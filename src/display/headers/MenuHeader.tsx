@@ -17,9 +17,9 @@ const MenuHeader = (prop: any) => {
                 <div className={"floatingButton backgrounddefault"}>
                     <PalleteSwap/>
                 </div>
-                <div className={"floatingButton backgrounddefault"}>
+                {/*<div className={"floatingButton backgrounddefault"}>
                     <LanguageSwap/>
-                </div>
+                </div>*/}
             </div>
             
         </ErrorBoundary>

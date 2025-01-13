@@ -23,8 +23,14 @@ const ActDisplay = (props: any) => {
         }
 
         return (
-            
-            <ItemStat title={"Range"} value={rangeval}/>
+            <div>                
+                <span>
+                    <span><b>{"Range: "} </b></span>
+                    <span>
+                        {rangeval}
+                    </span>
+                </span>
+            </div>
         )
     }
 

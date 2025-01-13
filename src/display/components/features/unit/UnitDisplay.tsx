@@ -22,11 +22,9 @@ const UnitDisplay = (props: any) => {
     function returnStats() {
         return (
             <div>
-                <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-2 row-cols-xs-1 row-cols-1 justify-content-center">
+                <div className="row row-cols-lg-6 row-cols-md-6 row-cols-sx-6 row-cols-xs-2 row-cols-2 justify-content-center">
                     <ItemStat title={"House"} value={makestringpresentable( unitObject.House)}/>
                     <ItemStat title={"Category"} value={unitObject.Category}/>
-                </div>
-                <div className="row row-cols-lg-4 row-cols-md-4 row-cols-sx-4 row-cols-xs-2 row-cols-2 justify-content-center">
                     <ItemStat title={"ARM"} value={unitObject.ARM}/>
                     <ItemStat title={"DF"} value={unitObject.DF}/>
                     <ItemStat title={"HP"} value={unitObject.HP}/>
