@@ -13,6 +13,7 @@ import TraitDisplay from '../trait/TraitDisplay';
 import ActDisplay from '../act/ActDisplay';
 import UpgradeDisplay from '../upgrade/UpgradeDisplay';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import { makestringpresentable } from '../../../../utility/functions';
 
 const UnitDisplay = (props: any) => {
     const unitObject: Unit = props.data
@@ -22,7 +23,7 @@ const UnitDisplay = (props: any) => {
         return (
             <div>
                 <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-2 row-cols-xs-1 row-cols-1 justify-content-center">
-                    <ItemStat title={"House"} value={unitObject.House}/>
+                    <ItemStat title={"House"} value={makestringpresentable( unitObject.House)}/>
                     <ItemStat title={"Category"} value={unitObject.Category}/>
                 </div>
                 <div className="row row-cols-lg-4 row-cols-md-4 row-cols-sx-4 row-cols-xs-2 row-cols-2 justify-content-center">
