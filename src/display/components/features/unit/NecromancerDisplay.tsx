@@ -42,7 +42,7 @@ const NecromancerDisplay = (props: any) => {
                 <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 1}} >
                     <Masonry gutter="20px">
                         {necromancerObject.Traits.map((Trait) => (
-                            <div key={Trait.Name} style={{marginBottom:"1rem"}}>
+                            <div key={Trait.Name} >
                                 <GenericDisplay  d_colour={necromancerObject.Colour} d_name={Trait.Name} d_type={"sub"} d_method={() => <TraitDisplay data={Trait} />}/>
                             </div>
                         ))}
@@ -58,7 +58,7 @@ const NecromancerDisplay = (props: any) => {
                 <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 1}} >
                     <Masonry gutter="20px">
                         {necromancerObject.Acts.map((Act) => (
-                            <div key={Act.Name} style={{marginBottom:"1rem"}}>
+                            <div key={Act.Name} >
                                 <GenericDisplay  d_colour={necromancerObject.Colour} d_name={Act.Name} d_type={"sub"} d_method={() => <ActDisplay data={Act} />}/>
                             </div>
                         ))}
@@ -74,7 +74,7 @@ const NecromancerDisplay = (props: any) => {
                 <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 1}} >
                     <Masonry gutter="20px">       
                         {necromancerObject.Soul.map((Soul) => (
-                            <div key={Soul.Name} style={{marginBottom:"1rem"}}>
+                            <div key={Soul.Name} >
                                 <GenericDisplay  d_colour={necromancerObject.Colour} d_name={Soul.Name} d_type={"sub"} d_method={() => <SoulDisplay data={Soul} />}/>
                             </div>
                         ))}
