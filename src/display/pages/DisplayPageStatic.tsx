@@ -131,7 +131,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
                         <div className="row">
                             <div className='filterbox centerPosition'>
                                 {manager.ReturnRangeFilters().filter((value) => (value.Group == "stat_mv")).map((item) => (
-                                    <FilterMiscItem key={"miscsource"+item.Set_Lower+"-"+item.Set_Upper} data={item} />
+                                    <FilterRangeItem key={"miscsource"+item.Set_Lower+"-"+item.Set_Upper} data={item} />
                                 ))}
                             </div>
                         </div>
@@ -139,7 +139,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
                         <div className="row">
                             <div className='filterbox centerPosition'>
                                 {manager.ReturnRangeFilters().filter((value) => (value.Group == "stat_hp")).map((item) => (
-                                    <FilterMiscItem key={"miscsource"+item.Set_Lower+"-"+item.Set_Upper} data={item} />
+                                    <FilterRangeItem key={"miscsource"+item.Set_Lower+"-"+item.Set_Upper} data={item} />
                                 ))}
                             </div>
                         </div>
@@ -147,7 +147,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
                         <div className="row">
                             <div className='filterbox centerPosition'>
                                 {manager.ReturnRangeFilters().filter((value) => (value.Group == "stat_df")).map((item) => (
-                                    <FilterMiscItem key={"miscsource"+item.Set_Lower+"-"+item.Set_Upper} data={item} />
+                                    <FilterRangeItem key={"miscsource"+item.Set_Lower+"-"+item.Set_Upper} data={item} />
                                 ))}
                             </div>
                         </div>
