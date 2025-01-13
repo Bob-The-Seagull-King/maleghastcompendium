@@ -19,9 +19,7 @@ interface IUnit extends ICompendiumItemData {
     acts        : [],
     upgrades    : [],
     colour      : string,
-    house       : string,
-    img_full    : string,
-    img_portrait: string
+    house       : string
 }
 
 class Unit extends CompendiumItem {
@@ -34,8 +32,6 @@ class Unit extends CompendiumItem {
     public readonly DF;
     public readonly ARM;
     public readonly House;
-    public readonly Portrait;
-    public readonly Full;
     
     /**
      * Assigns parameters and creates a series of description
@@ -57,8 +53,6 @@ class Unit extends CompendiumItem {
         this.ARM = data.stat_arm;
         this.House = data.house;
 
-        this.Portrait = data.img_portrait;
-        this.Full = data.img_full;
         this.Colour = data.colour
     }
 
