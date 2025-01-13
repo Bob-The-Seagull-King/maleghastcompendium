@@ -3,13 +3,13 @@ import { DescriptionFactory } from '../../../utility/functions';
 
 import { Trait } from '../trait/Trait';
 import { Act } from '../act/Act';
-import { Upgrade } from '../upgrade/Upgrade';
+import { Soul } from '../soul/Soul';
 
 import { TraitFactory } from '../../../factories/features/TraitFactory';
 import { ActFactory } from '../../../factories/features/ActFactory';
-import { UpgradeFactory } from '../../../factories/features/UpgradeFactory';
+import { SoulFactory } from '../../../factories/features/SoulFactory';
 
-interface IUnit extends ICompendiumItemData {
+interface INecromancer extends ICompendiumItemData {
     category    : string,
     stat_mv     : number,
     stat_hp     : number,
@@ -17,36 +17,47 @@ interface IUnit extends ICompendiumItemData {
     stat_arm    : string,
     traits      : [],
     acts        : [],
-    upgrades    : [],
+    soul        : [],
+    up_traits   : [],
+    up_acts     : [],
+    up_soul     : [],
     colour      : string,
     house       : string
 }
 
-class Unit extends CompendiumItem {
+class Necromancer extends CompendiumItem {
     public readonly Traits;
     public readonly Acts;
-    public readonly Upgrades;
-    public readonly Colour;
+    public readonly Soul;
+    public readonly UP_Traits;
+    public readonly UP_Acts;
+    public readonly UP_Soul;
+    
     public readonly MV;
     public readonly HP;
     public readonly DF;
     public readonly ARM;
+
     public readonly House;
     public readonly Category;
+    public readonly Colour;
     
     /**
      * Assigns parameters and creates a series of description
      * objects with DescriptionFactory
-     * @param data Object data in IUnit format
+     * @param data Object data in INecromancer format
      */
-    public constructor(data: IUnit)
+    public constructor(data: INecromancer)
     {
         super(data)
-        
+
         this.ItemType = ItemType.Unit;
         this.Traits = this.TraitBuilder(data.traits)
         this.Acts = this.ActBuilder(data.acts)
-        this.Upgrades = this.UpgradeBuilder(data.upgrades);
+        this.Soul = this.SoulBuilder(data.soul);
+        this.UP_Traits = this.TraitBuilder(data.up_traits)
+        this.UP_Acts = this.ActBuilder(data.up_acts)
+        this.UP_Soul = this.SoulBuilder(data.up_soul);
 
         this.MV = data.stat_mv;
         this.HP = data.stat_hp;
@@ -85,20 +96,20 @@ class Unit extends CompendiumItem {
         return actList;
     }
 
-    private UpgradeBuilder(data : string[]) {
-        const upgradeList : Upgrade[] = []
+    private SoulBuilder(data : string[]) {
+        const soulList : Soul[] = []
 
         for (let i = 0; i < data.length; i++) {
             try {
-                const newupgrade : Upgrade = UpgradeFactory.CreateNewUpgrade(data[i])
-                upgradeList.push(newupgrade);
-            } catch (e) { console.log("Upgrade Could Not Be Found") }
+                const newsoul : Soul = SoulFactory.CreateNewSoul(data[i])
+                soulList.push(newsoul);
+            } catch (e) { console.log("Soul Could Not Be Found") }
         }
 
-        return upgradeList;
+        return soulList;
     }
 
 }
 
-export {IUnit, Unit}
+export {INecromancer, Necromancer}
 

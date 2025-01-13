@@ -86,8 +86,6 @@ const UnitDisplay = (props: any) => {
         <ErrorBoundary fallback={<div>Something went wrong with UnitDisplay.tsx</div>}>
             <div className='abilityInternalStructure'>
                 <div>
-                {unitObject.Images.length > 0 &&
-                    <>
                         <div className="verticalspacer"/>
                         <div>
                             {returnStats()}
@@ -117,6 +115,8 @@ const UnitDisplay = (props: any) => {
                             {returnUpgrades()}
                         </div>
                         <div className="verticalspacer"/> 
+                {unitObject.Images.length > 0 &&
+                    <>
                         <div>
                             <div className="separator">Gallery</div>
                         </div> 

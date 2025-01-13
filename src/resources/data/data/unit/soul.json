@@ -1,0 +1,276 @@
+[
+    {
+        "id": "sl_reloadslide",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "reload": true,
+            "step": 1
+        },
+        "eventtags": { 
+            "step": true,
+            "reload": true
+        },
+        "name": "Reload Slide",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Step 1. Then, you or an adjacent ally reload.",
+                        "glossary": [ {"val": "reload", "id": "gl_reload"} , {"val": "Step", "id": "gl_step"} ]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 1,
+        "target"  : "Own Or Allied Turn"
+    },
+    {
+        "id": "sl_bullettime",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+        },
+        "eventtags": { 
+        },
+        "name": "Bullet Time",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Clear one",
+                        "glossary": [ {"val": "Push", "id": "gl_push"} ]
+                    },
+                    {
+                        "tags": {"desc_type" : "subeffect"},
+                        "content": " (5+) "
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "or two negative tokens.",
+                        "glossary": [ {"val": "tokens", "id": "gl_token"} ]
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Ranged attacks automatically miss you until the end of your next turn",
+                        "glossary": [ {"val": "Push", "id": "gl_push"} ]
+                    },
+                    {
+                        "tags": {"desc_type" : "subeffect"},
+                        "content": " (5+) "
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "and you are immune to splash and line damage for the duration.",
+                        "glossary": [ {"val": "splash", "id": "gl_splash"},{"val": "line", "id": "gl_line"} ]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 1,
+        "target"  : "Own Or Allied Turn"
+    },
+    {
+        "id": "sl_doubletap",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+        },
+        "eventtags": { 
+        },
+        "name": "Double Tap",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Trigger: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "You reduce a unit to exactly 1 hp."
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "You may immediately activate this ability to deal 1 damage to it, ignoring armor.",
+                        "glossary": [ {"val": "armor", "id": "gl_armour"} ]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 1,
+        "target"  : "Any Turn"
+    },
+    {
+        "id": "sl_fragbullet",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+        },
+        "eventtags": { 
+        },
+        "name": "Frag Bullet",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Trigger: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "You hit an attack."
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Target gains 3 vulnerable after the ability resolves.",
+                        "glossary": [ {"val": "vulnerable", "id": "gl_vulnerable"} ]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 1,
+        "target"  : "Own Turn"
+    },
+    {
+        "id": "sl_bullethustle",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+        },
+        "eventtags": { 
+        },
+        "name": "Bullet Hustle",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Trigger: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "After any unit MOVEs."
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Step 2, then deal 1 damage to a unit in range 3.",
+                        "glossary": [ {"val": "Step", "id": "gl_step"} ]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 2,
+        "target"  : "Any Turn"
+    },
+    {
+        "id": "sl_overwatch",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+        },
+        "eventtags": { 
+        },
+        "name": "Overwatch",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Reload. Until the start of your next turn, enemy units entering adjacent spaces without being pushed or pulled there take 1 damage and are pushed 1, interrupting their movement. This effect can only trigger once a turn.",
+                        "glossary": [ {"val": "Reload", "id": "gl_reload"} ,{"val": "pushed", "id": "gl_push"} ,{"val": "pulled", "id": "gl_pull"} ]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 3,
+        "target"  : "Own Turn"
+    },
+    {
+        "id": "sl_bulletsonata",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+        },
+        "eventtags": { 
+        },
+        "name": "Bullet Sonata",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Every foe in range 2 takes 1 damage, ignoring armor, and is pushed 1.",
+                        "glossary": [ {"val": "armor", "id": "gl_armour"} ,{"val": "pushed", "id": "gl_push"}]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 4,
+        "target"  : "Own Turn"
+    },
+    {
+        "id": "sl_stg",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+        },
+        "eventtags": { 
+        },
+        "name": "S.T.G",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Trigger: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Headshot.",
+                        "glossary": [ {"val": "Headshot", "id": "gl_headshot"}]
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Deal 6 devil damage to the targeted unit, sending them Straight to the Grave.",
+                        "glossary": [ {"val": "devil damage", "id": "gl_devildamage"}]
+                    }
+                ]
+            }
+        ],
+        "cost"    : 6,
+        "target"  : "Own Turn"
+    }
+]

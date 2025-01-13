@@ -9,6 +9,8 @@ import en_unitdata from '../data/unit/unit.json'
 import en_traitdata from '../data/unit/trait.json'
 import en_actdata from '../data/unit/act.json'
 import en_upgradedata from '../data/unit/upgrade.json'
+import en_souldata from '../data/unit/soul.json'
+import en_necromancerdata from '../data/unit/necromancer.json'
 // -----------------------------------------------------
 /////////////////////////////// ENGLISH ///////////////////////////////
 
@@ -25,6 +27,8 @@ export interface DataSetTC {
     traitdata : any,
     actdata : any,
     upgradedata : any
+    souldata : any,
+    necromancerdata : any
 }
 
 export const DataByLanguageTable : LanguageDataTable = {
@@ -35,6 +39,8 @@ export const DataByLanguageTable : LanguageDataTable = {
         unitdata : en_unitdata,
         traitdata : en_traitdata,
         actdata : en_actdata,
-        upgradedata : en_upgradedata
+        upgradedata : en_upgradedata,
+        souldata : en_souldata,
+        necromancerdata: en_necromancerdata
     }
 }

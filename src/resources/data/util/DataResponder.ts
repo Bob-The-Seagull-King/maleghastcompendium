@@ -87,6 +87,12 @@ class DataResponder {
             case "upgrade": {
                 return RelevantSet.upgradedata.concat(data)
             }
+            case "soul": {
+                return RelevantSet.souldata.concat(data)
+            }
+            case "necromancer": {
+                return RelevantSet.necromancerdata.concat(data)
+            }
             default: {
                 return data
             }

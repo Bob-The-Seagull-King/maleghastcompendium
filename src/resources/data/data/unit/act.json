@@ -78,5 +78,320 @@
         ],
         "range": [],
         "attack": false
+    },
+    {
+        "id": "ac_akimbo",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "reload": true,
+            "attack": true
+        },
+        "eventtags": { 
+            "ranged": true,
+            "attack": true,
+            "reload": true
+        },
+        "name": "Akimbo",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "On Hit: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "2 damage."
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "subeffect"},
+                        "content": " (4+) "
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "One other foe in range takes 1 damage."
+                    },
+                    {
+                        "tags": {"desc_type" : "subeffect"},
+                        "content": " (3+) "
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "One other foe in range takes 1 damage."
+                    }
+                ]
+            }
+        ],
+        "range": [2,4],
+        "attack": true
+    },
+    {
+        "id": "ac_grenadejump",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "self": true
+        },
+        "eventtags": { 
+            "self": true
+        },
+        "name": "Grenade Jump",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Splash (Self): ",
+                "glossary": [ {"val": "Splash", "id": "gl_splash"} ],
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "1 fire damage, then step 2 with free movement.",
+                        "glossary": [ {"val": "step", "id": "gl_step"} , {"val": "free movement", "id": "gl_freemovement"} ]
+                    }
+                ]
+            }
+        ],
+        "range": [],
+        "attack": false
+    },
+    {
+        "id": "ac_armorlock",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "self": true
+        },
+        "eventtags": { 
+            "self": true
+        },
+        "name": "Armor Lock",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Push all adjacent foes 1. Until the end of your next turn, you gain super armor, cover from all directions, and allied units can use as a cover object. You cannot MOVE, step or be pushed or pulled for the same duration.",
+                        "glossary": [ {"val": "Push", "id": "gl_push"} , {"val": "super armor", "id": "gl_armour"}, {"val": "cover", "id": "gl_cover"}, {"val": "pushed", "id": "gl_push"}, {"val": "pulled", "id": "gl_pull"} ]
+                    }
+                ]
+            }
+        ],
+        "range": [],
+        "attack": false
+    },
+    {
+        "id": "ac_devilbullet",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "self": true
+        },
+        "eventtags": { 
+            "self": true
+        },
+        "name": "Devil Bullet",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Reload. Your next attack ignores armor, and automatically triggers headshot effects on hit.",
+                        "glossary": [ {"val": "Reload", "id": "gl_reload"} , {"val": "armor", "id": "gl_armour"}, {"val": "headshot", "id": "gl_headshot"} ]
+                    }
+                ]
+            }
+        ],
+        "range": [],
+        "attack": false
+    },
+    {
+        "id": "ac_superkick",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "melee": true
+        },
+        "eventtags": { 
+            "melee": true
+        },
+        "name": "Super Kick",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Push an adjacent unit 3. Foes gain 1 vulnerable if they would be pushed into a wall or elevated space.",
+                        "glossary": [ {"val": "Push", "id": "gl_push"} , {"val": "1 vulnerable", "id": "gl_vulnerable"}, {"val": "pushed", "id": "gl_push"}, {"val": "elevated space", "id": "gl_elevated"} ]
+                    }
+                ]
+            }
+        ],
+        "range": [],
+        "attack": false
+    },
+    {
+        "id": "ac_lv4livingcannon",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "reload": true,
+            "attack": true
+        },
+        "eventtags": { 
+            "ranged": true,
+            "reload": true,
+            "attack": true
+        },
+        "name": "LV4 Living Cannon",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "On Hit: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "1 fire damage and 1 vulnerable",
+                        "glossary": [ {"val": "vulnerable", "id": "gl_vulnerable"} ]
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Headshot: ",
+                "glossary": [ {"val": "Headshot", "id": "gl_headshot"} ],
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Splash (target) 1 Vulnerable",
+                        "glossary": [ {"val": "Vulnerable", "id": "gl_vulnerable"},{"val": "Splash", "id": "gl_splash"} ]
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Must reload twice before this is usable.",
+                        "glossary": [ {"val": "reload", "id": "gl_reload"} ]
+                    }
+                ]
+            }
+        ],
+        "range": [3,6],
+        "attack": true
+    },
+    {
+        "id": "ac_sg88twobarrelshotguun",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "reload": true,
+            "attack": true
+        },
+        "eventtags": { 
+            "ranged": true,
+            "reload": true,
+            "attack": true
+        },
+        "name": "SG88 Two Barrel Shotgun",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "On Hit: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "1 damage, then 1 damage."
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Headshot: ",
+                "glossary": [ {"val": "Headshot", "id": "gl_headshot"} ],
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Reload.",
+                        "glossary": [ {"val": "Reload", "id": "gl_reload"}]
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Effect: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Push 1, then push 1.",
+                        "glossary": [ {"val": "Push", "id": "gl_push"},{"val": "push", "id": "gl_push"} ]
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Special: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Has a Range of exactly 2."
+                    }
+                ]
+            }
+        ],
+        "range": [2,2],
+        "attack": true
+    },
+    {
+        "id": "ac_unholysixgun",
+        "type": "Act",
+        "source": "core",
+        "tags": {
+            "reload": true,
+            "attack": true
+        },
+        "eventtags": { 
+            "ranged": true,
+            "reload": true,
+            "attack": true
+        },
+        "name": "Unholy Sixgun",
+        "description":  [
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "On Hit: ",
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "2 damage."
+                    }
+                ]
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Headshot: ",
+                "glossary": [ {"val": "Headshot", "id": "gl_headshot"} ],
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "This attack deals +1 base damage on hit for the rest of combat, up to a maximum of 4.."
+                    }
+                ]
+            }
+        ],
+        "range": [2,4],
+        "attack": true
     }
 ]

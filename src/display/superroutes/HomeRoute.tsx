@@ -13,7 +13,7 @@ import logo from '../../resources/images/compendium.png'
 
 // Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList, faSkull } from '@fortawesome/free-solid-svg-icons'
+import { faList, faPerson, faSkull } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 
 const HomeRoute: React.FC = () => {
@@ -58,6 +58,14 @@ const HomeRoute: React.FC = () => {
                                 <FontAwesomeIcon icon={faSkull} className="pageaccestext"/>
                                 <h1 className="pageaccestext">
                                     UNITS
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="col" style={{padding:"0.5em"}}>
+                            <div className="pageaccessbox borderstyler subborderdefault hovermouse" onClick={() => NavigateHome("compendium/necromancer/")}>
+                                <FontAwesomeIcon icon={faPerson} className="pageaccestext"/>
+                                <h1 className="pageaccestext">
+                                    NECROMANCERS
                                 </h1>
                             </div>
                         </div>

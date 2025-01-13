@@ -42,6 +42,35 @@
         }]
     },
     {
+        "id": "gl_devildamage",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "health"
+        },
+        "eventtags": {},
+        "name": "Devil Damage",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Devil damage is its own category and cannot be reduced, increased, or ignored for any reason. Additionally units reduced to 0 hp by devil damage are instantly obliterated (don’t leave a corpse token) and don’t trigger any effects.",
+            "glossary": [ {"val": "obliterated", "id": "gl_obliteratedt"}]
+        }]
+    },
+    {
+        "id": "gl_obliterated",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "special"
+        },
+        "eventtags": {},
+        "name": "Obliterated",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Units that are obliterated don’t leave a corpse, don’t leave a SOUL, and don’t trigger effects from being slain or reduced to 0 hp."
+        }]
+    },
+    {
         "id": "gl_headshot",
         "type": "Glossary",
         "source": "core",
@@ -126,6 +155,42 @@
         }]
     },
     {
+        "id": "gl_pull",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "movement"
+        },
+        "eventtags": { 
+        },
+        "name": "Pull",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Involuntarily pull unit a number of spaces, as long as each space of the push is closer to the pulling unit or effect than the last space. Does not count as moving."
+        },
+        { "tags": {"desc_type" : "gap"}, "content": ""},
+        {
+            "tags": {"desc_type" : "desc"},
+            "content": "When a unit is pulled by an ability, it is called forced movement. Forced movement ignores movement penalties (such as from terrain) and doesn’t count as a MOVE."
+        }]
+    },
+    {
+        "id": "gl_step",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "movement"
+        },
+        "eventtags": { 
+        },
+        "name": "Step",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "When a unit steps, it moves that many spaces, but it doesn’t count as a MOVE."
+        }
+        ]
+    },
+    {
         "id": "gl_cover",
         "type": "Glossary",
         "source": "core",
@@ -145,5 +210,143 @@
             "tags": {"desc_type" : "desc"},
             "content": "Units can take cover against ranged attacks by moving next to a space that grants cover (by default an elevated space or a wall). If they do, draw an imaginary straight line across the battlefield lined up with where they are touching their cover. They gain cover against units in spaces past that line."
         }]
+    },
+    {
+        "id": "gl_token",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "token"
+        },
+        "eventtags": { 
+        },
+        "name": "Tokens",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Many ACT abilities and traits interact with tokens."
+            },
+            { "tags": {"desc_type" : "gap"}, "content": ""},
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Tokens are simple positive or negative effects that can be tracked with a virtual tabletop tool, or in person with colored d6s placed on unit cards, a sheet of paper, or a note pad. There are six basic tokens, three positive and three negative. Each faction typically only interacts with two - strength and one other."
+            },
+            { "tags": {"desc_type" : "gap"}, "content": ""},
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "For example, the strength token grants +1 damage when dealing damage. The weak token grants -1 damage when dealing damage."
+            },
+            { "tags": {"desc_type" : "gap"}, "content": ""},
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Tokens cancel each other out, like the above. A unit with 2 strength tokens would simply remove one if they gain a weak token, and vice versa."
+            },
+            { "tags": {"desc_type" : "gap"}, "content": ""},
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Tokens have a static effect as long as you have at least one of those tokens. For example, a unit with 2 strength tokens would deal +1 damage when they deal damage, not +2. When they deal damage, they increase that damage by +1, then discard a token."
+            },
+            { "tags": {"desc_type" : "gap"}, "content": ""},
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Spending a token is not optional, and tokens are always spent when their condition is satisfied. You can choose how to spend a token if multiple conditions trigger at once. For example, if 3 units are hit by a splash effect that deals 1 damage and the attacking unit has 1 strength, you can choose which of those units takes +1 damage from the strength."
+            }
+        ]
+    },
+    {
+        "id": "gl_splash",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "area"
+        },
+        "eventtags": { 
+        },
+        "name": "Splash",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Splash effects affect all units adjacent to the targeted unit or space, but not the target itself. For example, if an ability inflicts 1 fire damage, then splash (target) 1 fire damage, all units adjacent to the targeted unit would take 1 fire damage, and the targeted unit would take 1 fire damage."
+        }]
+    },
+    {
+        "id": "gl_line",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "area"
+        },
+        "eventtags": { 
+        },
+        "name": "Line",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Line effects affect all units in a straight line, drawn in a straight compass direction from the ACTing unit of a certain number of spaces. Lines can’t be drawn diagonally and don’t penetrate through walls. They can be drawn over elevated spaces only if the ACTing unit is itself on on an elevated space."
+        }]
+    },
+    {
+        "id": "gl_freemovement",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "movement"
+        },
+        "eventtags": { 
+        },
+        "name": "Free Movement",
+        "description":  [{
+            "tags": {"desc_type" : "desc"},
+            "content": "Some abilities grant free movement while moving. Free movement means a unit’s movement can’t be reduced by any means."
+        }]
+    },
+    {
+        "id": "gl_elevated",
+        "type": "Glossary",
+        "source": "core",
+        "tags": {
+            "category" : "terrain"
+        },
+        "eventtags": { 
+        },
+        "name": "Elevated Terrain",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "This space has elevation, whether it is a hill, a walkway, or just an object that can be climbed on. Elevated has only one (abstracted) level, and spaces have the following rules:"
+            },
+            {
+                "tags": {"desc_type" : "list"},
+                "content": "",
+                "subcontent": [
+                    
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "It costs +1 movement to enter an elevated space from a ground space."
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Elevated spaces can be used for cover by units on non-elevated spaces.",
+                        "glossary": [ {"val": "cover", "id": "gl_cover"}]
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Elevation does not factor into range or adjacency."
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Attacks from elevated units against units in non-elevated spaces gain +1D, and attacks against characters on elevated spaces from non-elevated spaces gain -1D.",
+                        "glossary": [ {"val": "+1D", "id": "gl_plusdice"}, {"val": "-1D", "id": "gl_minusdice"}]
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Units cannot be pushed or pulled up elevation but can be pushed or pulled down elevation normally.",
+                        "glossary": [ {"val": "pushed", "id": "gl_push"}, {"val": "pulled", "id": "gl_pull"}]
+                    },
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "You may optionally add a ramp or stairs space, which allows a character to skip elevation movement costs."
+                    }
+                ]
+            }
+        ]
     }
 ]

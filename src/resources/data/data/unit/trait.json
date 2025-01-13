@@ -27,5 +27,76 @@
                 "content": "2 of these units are worth 1 unit slot. Can be activated two at a time."
             }
         ]
+    },
+    {
+        "id": "tr_hotclip",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Hot Clip",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Once a round, reloading grants you 1 strength and causes your next attack to inflict +1 vulnerable on hit.",
+                "glossary": [ {"val": "reloading", "id": "gl_reload"},{"val": "1 strength", "id": "gl_strength"},{"val": "+1 vulnerable", "id": "gl_vulnerable"} ]
+            }
+        ]
+    },
+    {
+        "id": "tr_bonewall",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Bone Wall",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "You can use your units as cover. While in cover your abilities gain +2 range.",
+                "glossary": [ {"val": "cover", "id": "gl_cover"} ]
+            }
+        ]
+    },
+    {
+        "id": "tr_gunkata",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Gun Kata",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Ranged attacks gain a minimum range of 1 and push units 1 if they are adjacent.",
+                "glossary": [ {"val": "push", "id": "gl_push"} ]
+            }
+        ]
+    },
+    {
+        "id": "tr_clutchreload",
+        "type": "Trait",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Clutch Reload",
+        "description":  [
+            {
+                "tags": {"desc_type" : "desc"},
+                "content": "Your ranged attacks gain: "
+            },
+            {
+                "tags": {"desc_type" : "effect"},
+                "content": "Headshot: ",
+                "glossary": [ {"val": "Headshot", "id": "gl_headshot"} ],
+                "subcontent": [
+                    {
+                        "tags": {"desc_type" : "desc"},
+                        "content": "Reload.",
+                        "glossary": [ {"val": "Reload", "id": "gl_reload"} ]
+                    }
+                ]
+            }
+        ]
     }
 ]

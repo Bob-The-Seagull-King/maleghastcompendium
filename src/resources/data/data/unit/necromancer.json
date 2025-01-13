@@ -1,0 +1,23 @@
+[
+    {
+        "id": "nc_operator",
+        "type": "Unit",
+        "source": "core",
+        "tags": {},
+        "eventtags": {},
+        "name": "Operator",
+        "colour": "pink",
+        "category"    : "Necromancer",
+        "stat_mv"     : 4,
+        "stat_hp"     : 8,
+        "stat_df"     : 4,
+        "stat_arm"    : "PHYS",
+        "house"       : "hs_carcass",
+        "traits"      : ["tr_formation","tr_hotclip"],
+        "acts"        : ["ac_akimbo"],
+        "soul"        : ["sl_reloadslide","sl_bullettime"],
+        "up_traits"   : ["tr_bonewall","tr_gunkata","tr_clutchreload"],
+        "up_acts"     : ["ac_grenadejump","ac_armorlock","ac_devilbullet","ac_superkick","ac_lv4livingcannon","ac_sg88twobarrelshotguun","ac_unholysixgun"],
+        "up_soul"     : ["sl_doubletap","sl_fragbullet","sl_bullethustle","sl_overwatch","sl_bulletsonata","sl_stg"]
+    }
+]
