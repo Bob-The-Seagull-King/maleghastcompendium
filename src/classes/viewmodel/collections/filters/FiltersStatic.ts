@@ -77,7 +77,7 @@ export const FitlerDataDex : FilterDataTable = {
     
             let i = 0;
             for (i = 0; i < keytypes.length; i ++) {
-                const foundVals = Requester.MakeRequest({ searchtype: 'keyvalues', searchparam: { type: 'glossary' , id: keytypes[i]} }).sort();
+                const foundVals = Requester.MakeRequest({ searchtype: 'keyvalues', searchparam: { type: 'unit' , id: keytypes[i]} }).sort();
                 
                 let j = 0;
                 for (j = 0; j < foundVals.length; j++) {
@@ -102,7 +102,7 @@ export const FitlerDataDex : FilterDataTable = {
                 const foundVals = Requester.MakeRequest({ searchtype: 'keyvalues', searchparam: { type: 'unit' , id: keytypes[i]} }).sort();
                 
                 foundVals.sort();
-                const tempItemObject: IFilterRange = { group: keytypes[i], set_lower: foundVals[0], set_upper: foundVals[-1], lower: foundVals[0], upper: foundVals[-1]}
+                const tempItemObject: IFilterRange = { group: keytypes[i], set_lower: foundVals[0], set_upper: foundVals[foundVals.length - 1], lower: foundVals[0], upper: foundVals[foundVals.length - 1]}
                 const tempItemConstructed = new FilterRange(tempItemObject);
                 tempMisc.push(tempItemConstructed);
             }

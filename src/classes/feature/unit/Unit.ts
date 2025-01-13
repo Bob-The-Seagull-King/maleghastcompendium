@@ -19,7 +19,9 @@ interface IUnit extends ICompendiumItemData {
     acts        : [],
     upgrades    : [],
     colour      : string,
-    house       : string
+    house       : string,
+    img_full    : string,
+    img_portrait: string
 }
 
 class Unit extends CompendiumItem {
@@ -32,6 +34,8 @@ class Unit extends CompendiumItem {
     public readonly DF;
     public readonly ARM;
     public readonly House;
+    public readonly Portrait;
+    public readonly Full;
     
     /**
      * Assigns parameters and creates a series of description
@@ -41,25 +45,29 @@ class Unit extends CompendiumItem {
     public constructor(data: IUnit)
     {
         super(data)
+        console.log(data);
         this.ItemType = ItemType.Unit;
         this.Traits = this.TraitBuilder(data.traits)
         this.Acts = this.ActBuilder(data.acts)
         this.Upgrades = this.UpgradeBuilder(data.upgrades);
 
-        this.Colour = data.colour
         this.MV = data.stat_mv;
         this.HP = data.stat_hp;
         this.DF = data.stat_df;
         this.ARM = data.stat_arm;
         this.House = data.house;
+
+        this.Portrait = data.img_portrait;
+        this.Full = data.img_full;
+        this.Colour = data.colour
     }
 
     private TraitBuilder(data : string[]) {
-        let traitlist : Trait[] = []
+        const traitlist : Trait[] = []
 
         for (let i = 0; i < data.length; i++) {
             try {
-                let newtrait : Trait = TraitFactory.CreateNewTrait(data[i])
+                const newtrait : Trait = TraitFactory.CreateNewTrait(data[i])
                 traitlist.push(newtrait);
             } catch (e) { console.log("Trait Could Not Be Found") }
         }
@@ -68,11 +76,11 @@ class Unit extends CompendiumItem {
     }
 
     private ActBuilder(data : string[]) {
-        let actList : Act[] = []
+        const actList : Act[] = []
 
         for (let i = 0; i < data.length; i++) {
             try {
-                let newact : Act = ActFactory.CreateNewAct(data[i])
+                const newact : Act = ActFactory.CreateNewAct(data[i])
                 actList.push(newact);
             } catch (e) { console.log("Act Could Not Be Found") }
         }
@@ -81,11 +89,11 @@ class Unit extends CompendiumItem {
     }
 
     private UpgradeBuilder(data : string[]) {
-        let upgradeList : Upgrade[] = []
+        const upgradeList : Upgrade[] = []
 
         for (let i = 0; i < data.length; i++) {
             try {
-                let newupgrade : Upgrade = UpgradeFactory.CreateNewUpgrade(data[i])
+                const newupgrade : Upgrade = UpgradeFactory.CreateNewUpgrade(data[i])
                 upgradeList.push(newupgrade);
             } catch (e) { console.log("Upgrade Could Not Be Found") }
         }

@@ -37,12 +37,13 @@ export const CollectionDataDex : CollectionDataTable = {
         pageName: 'Units',
         sort: ["colour", "name", "id"],
         postSearch(model : ViewCollectionsModel) {
+            console.log(model.dataresults)
             model.CleanupItems();
             model.CleanupCollection();
             let i = 0;
             model.dataresults.sort(byPropertiesOf<IUnit>(["colour", "name", "id"]))
             for (i = 0; i < model.dataresults.length; i++) {
-                const unitnew = UnitFactory.CreateNewUnit(model.dataresults[i]);
+                const unitnew = UnitFactory.CreateUnit(model.dataresults[i]);
                 const ItemNew = new ViewTableItem(unitnew, getColour(unitnew.Colour));
                 model.itemcollection.push(ItemNew);
             }

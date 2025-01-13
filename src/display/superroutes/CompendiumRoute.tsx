@@ -33,6 +33,7 @@ const CompendiumRoute: React.FC<IControllerProp> = (prop) => {
             <div className="backgroundBaseColour" data-theme={theme}>
             <Routes>
                 <Route path={ROUTES.COMPENDIUM_GLOSSARY_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.GlossaryCollectionController}/>} />
+                <Route path={ROUTES.COMPENDIUM_UNIT_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.UnitCollectionController}/>} />
             </Routes>
             </div>
         </ErrorBoundary>

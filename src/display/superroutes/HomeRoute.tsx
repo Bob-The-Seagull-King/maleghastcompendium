@@ -13,7 +13,7 @@ import logo from '../../resources/images/compendium.png'
 
 // Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList } from '@fortawesome/free-solid-svg-icons'
+import { faList, faSkull } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 
 const HomeRoute: React.FC = () => {
@@ -51,6 +51,19 @@ const HomeRoute: React.FC = () => {
                     <div className='row'><div className='col'><br/></div></div>
                     <div className="row">
                         <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Content</h3></div>
+                    </div>
+                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                        <div className="col" style={{padding:"0.5em"}}>
+                            <div className="pageaccessbox borderstyler subborderdefault hovermouse" onClick={() => NavigateHome("compendium/unit/")}>
+                                <FontAwesomeIcon icon={faSkull} className="pageaccestext"/>
+                                <h1 className="pageaccestext">
+                                    UNITS
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Rules</h3></div>
                     </div>
                     <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                         <div className="col" style={{padding:"0.5em"}}>

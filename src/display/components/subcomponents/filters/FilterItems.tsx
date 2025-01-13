@@ -201,7 +201,7 @@ const FilterTagItem = (prop: any) => {
 const FilterMiscItem = (prop: any) => {
     const ItemFilter: FilterItem = prop.data
     const [_currentstate, returnactivetext] = useState(GetDisplayVal(ItemFilter));
-
+    console.log(ItemFilter);
 
     // Return result -----------------------------
     return (
